@@ -1,10 +1,9 @@
 class JugadoresController < ApplicationController
-  def index
+  def index ()
     @jugadores = Jugadore.all
   end
 
   def show
-    @jugadores = Jugadore.all
     @jugadores= Jugadore.find
   end
 
@@ -12,8 +11,8 @@ class JugadoresController < ApplicationController
       @jugadore = Jugadore.new
   end
 
-  def name
-    @name = JugadoresTypes.jugadore_id(@name)
+  def delete
+    @jugadores = Jugadore.destroy
   end
 
 end

@@ -12,7 +12,16 @@ class TypesController < ApplicationController
       @type = Type.new
   end
 
-  def name
-    @name = JugadoresTypes.type_id(@name)
+  def create
+    @type = Type.create(@type)
+  end
+
+
+  def delete
+    @types = Type.destroy
+  end
+
+  def exclude
+    @types = Type.uniq(@types)
   end
 end
