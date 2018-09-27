@@ -1,3 +1,4 @@
 class Jugadore < ApplicationRecord
-  has_and_belongs_to_many :types
+  has_many :types
+  has_one :score
 end

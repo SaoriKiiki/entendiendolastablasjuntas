@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_27_010613) do
+ActiveRecord::Schema.define(version: 2018_09_27_021419) do
 
   create_table "jugadores", force: :cascade do |t|
     t.string "name"
@@ -23,8 +23,12 @@ ActiveRecord::Schema.define(version: 2018_09_27_010613) do
     t.integer "type_id", null: false
   end
 
-  create_table "types", force: :cascade do |t|
-    t.string "name"
+  create_table "scores", force: :cascade do |t|
+    t.integer "calification"
+    t.integer "jugadore_id"
   end
+
+# Could not dump table "types" because of following StandardError
+#   Unknown type 'adjective' for column 'name'
 
 end
